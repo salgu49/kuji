@@ -25,7 +25,7 @@ class KujiGame {
         this.restartButton = document.getElementById('restart-button');
 
         // Audio elements
-        this.pageturmAudio = document.getElementById('pageturn-audio');
+        this.pageturnAudio = document.getElementById('pageturn-audio');
         this.fireworksAudio = document.getElementById('fireworks-audio');
 
         // Reward pool configuration
@@ -159,16 +159,16 @@ class KujiGame {
      */
     playRewardEffect(reward) {
         switch (reward) {
-            case 'SSS':
+            case 'SSS상':
                 this.playRewardEffect_SSS();
                 break;
-            case 'SS':
+            case 'SS상':
                 this.playRewardEffect_SS();
                 break;
-            case 'A':
+            case 'A상':
                 this.playRewardEffect_A();
                 break;
-            case 'B':
+            case 'B상':
                 this.playRewardEffect_B();
                 break;
             // C, D, E, F have no confetti
@@ -312,7 +312,6 @@ class KujiGame {
         this.cardInner.classList.remove('flipped');
         this.rewardText.textContent = '?';
         this.rewardDisplay.classList.remove('glow-golden', 'glow-red');
-    }
 
     }
 
@@ -389,5 +388,5 @@ document.addEventListener('DOMContentLoaded', () => {
  * Handle page unload
  */
 window.addEventListener('beforeunload', () => {
-    console.log('🎰 Kuji Lottery Game Closing...');
+    console.log('Kuji Lottery Game Closing...');
 });
