@@ -108,14 +108,19 @@ body {
 }
 
 .card {
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35);
     width: 100%;
     height: 100%;
     position: relative;
-    transition: transform 0.3s ease;
+    transition:
+    transform .45s,
+    box-shadow .45s;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform:scale(1.05) translateY(-12px);
+    filter:drop-shadow(0 25px 40px rgba(0,0,0,.45));
 }
 
 .card-inner {
@@ -187,7 +192,7 @@ body {
     0 0 10px #000,
     0 0 20px #000,
     0 0 50px #000;
-    animation:pop .4s ease;
+    animation:rewardPop .45s cubic-bezier(.18,.89,.32,1.28);
 }
 
 /* Reward Glow Effects */
@@ -449,4 +454,56 @@ body {
         box-shadow: none;
         max-width: none;
     }
+}
+
+/* ========================= */
+/* Idle Animation */
+/* ========================= */
+
+@keyframes idleFloat {
+
+    0%{
+        transform:translateY(0px) rotate(-1deg);
+    }
+
+    50%{
+        transform:translateY(-6px) rotate(1deg);
+    }
+
+    100%{
+        transform:translateY(0px) rotate(-1deg);
+    }
+
+}
+
+.card:not(.flipped){
+
+    animation:idleFloat 2.8s ease-in-out infinite;
+
+}
+
+@keyframes rewardPop{
+
+0%{
+
+transform:scale(.2);
+
+opacity:0;
+
+}
+
+60%{
+
+transform:scale(1.35);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
 }
