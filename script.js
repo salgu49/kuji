@@ -20,7 +20,6 @@ class KujiGame {
         this.cardWrapper = document.getElementById('card-wrapper');
         this.rewardDisplay = document.getElementById('reward-display');
         this.rewardText = document.getElementById('reward-text');
-        this.remainingCount = document.getElementById('remaining-count');
         this.instructions = document.getElementById('instructions');
         this.gameOverContainer = document.getElementById('game-over-container');
         this.restartButton = document.getElementById('restart-button');
@@ -73,7 +72,6 @@ class KujiGame {
         }
 
         console.log('Reward pool created and shuffled:', this.rewards);
-        this.updateCounter();
         this.resetCardState();
     }
 
@@ -148,7 +146,6 @@ class KujiGame {
 
         // Display reward
         this.rewardText.textContent = reward;
-        this.updateCounter();
 
         // Play effects based on reward type
         this.playRewardEffect(reward);
@@ -317,11 +314,6 @@ class KujiGame {
         this.rewardDisplay.classList.remove('glow-golden', 'glow-red');
     }
 
-    /**
-     * Update remaining counter
-     */
-    updateCounter() {
-        this.remainingCount.textContent = this.rewards.length;
     }
 
     /**
