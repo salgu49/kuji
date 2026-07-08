@@ -314,11 +314,9 @@ class KujiGame {
         this.rewardText.textContent = '';
         this.rewardDisplay.classList.remove('glow-golden', 'glow-red');
 
-    }
+    
 
-    /**
-     * End game - show game over state
-     */
+
     endGame() {
         this.isGameOver = true;
         this.gameOverContainer.style.display = 'block';
