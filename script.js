@@ -73,7 +73,7 @@ class KujiGame {
 
         console.log('Reward pool created and shuffled:', this.rewards);
         this.resetCardState();
-        this.spawnCard();
+        //this.spawnCard();
     }
 
     /**
