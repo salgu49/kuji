@@ -100,7 +100,7 @@ body {
 /* Card Wrapper and Flip Animation */
 .card-wrapper {
     perspective: 1000px;
-    width: 520px
+    width: 520px;
     height: 320px;
     max-width:90vw;
     aspect-ratio:auto;
@@ -153,7 +153,7 @@ body {
 }
 
 .card-front {
-    background: transpaarent;
+    background: transparent;
 }
 
 .card-image {
