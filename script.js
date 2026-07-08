@@ -116,7 +116,7 @@ class KujiGame {
         this.cardWrapper.classList.add('disabled');
 
         // Play page turn sound
-        this.playSound(this.pageturmAudio);
+        this.playSound(this.pageturnAudio);
 
         // Perform 3D flip animation
         setTimeout(() => {
@@ -313,10 +313,11 @@ class KujiGame {
         this.cardInner.classList.remove('flipped');
         this.rewardText.textContent = '';
         this.rewardDisplay.classList.remove('glow-golden', 'glow-red');
+    }
 
-    
-
-
+    /**
+     * End the game
+     */
     endGame() {
         this.isGameOver = true;
         this.gameOverContainer.style.display = 'block';
