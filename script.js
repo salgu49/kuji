@@ -316,6 +316,24 @@ class KujiGame {
     }
 
     /**
+     * Spawn card - make it visible and ready for interaction
+     */
+    spawnCard() {
+        // Ensure card is visible
+        this.cardWrapper.style.display = 'block';
+        this.cardWrapper.style.opacity = '1';
+        this.cardWrapper.style.transform = 'none';
+
+        // Reset card to unflipped state
+        this.cardInner.classList.remove('flipped');
+
+        // Clear reward text
+        this.rewardText.textContent = '';
+
+        console.log('Card spawned and ready for interaction');
+    }
+
+    /**
      * End the game
      */
     endGame() {
