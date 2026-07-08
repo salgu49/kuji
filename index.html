@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠지 - Kuji Lottery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Canvas Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">🎰 쿠지</h1>
+            <div class="stats">
+                <span class="stat-item">
+                    <span class="stat-label">남은 쿠지:</span>
+                    <span class="stat-value" id="remaining-count">80</span>
+                </span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Card Container -->
+            <div class="card-wrapper" id="card-wrapper">
+                <div class="card" id="card">
+                    <div class="card-inner" id="card-inner">
+                        <!-- Front -->
+                        <div class="card-front">
+                            <img src="kuji_front.png" alt="Front" class="card-image">
+                        </div>
+                        <!-- Back (Reward) -->
+                        <div class="card-back">
+                            <div class="reward-display" id="reward-display">
+                                <span class="reward-text" id="reward-text">?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over State -->
+            <div class="game-over-container" id="game-over-container" style="display: none;">
+                <h2 class="game-over-title">🎉 쿠지 소진!</h2>
+                <p class="game-over-message">모든 쿠지를 다 뽑으셨습니다.</p>
+            </div>
+
+            <!-- Instructions -->
+            <div class="instructions" id="instructions">
+                <p>카드를 클릭하여 쿠지를 뽑으세요</p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Restart Button (shown when game is over) -->
+            <button class="restart-button" id="restart-button" style="display: none;">
+                다시 시작
+            </button>
+        </footer>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="pageturn-audio" preload="auto">
+        <source src="pageturn.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="fireworks-audio" preload="auto">
+        <source src="fireworks.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
