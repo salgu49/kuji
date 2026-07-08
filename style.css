@@ -507,3 +507,49 @@ transform:scale(1);
 }
 
 }
+
+.SSS상{
+
+color:#FFD700;
+
+text-shadow:
+
+0 0 20px gold,
+
+0 0 45px gold,
+
+0 0 90px gold;
+
+}
+
+.SS상{
+
+color:#ff4a4a;
+
+text-shadow:
+
+0 0 20px red,
+
+0 0 40px red;
+
+}
+
+.A상{
+
+color:#ff9c00;
+
+text-shadow:
+
+0 0 20px orange;
+
+}
+
+.B상{
+
+color:#d26cff;
+
+text-shadow:
+
+0 0 20px violet;
+
+}
