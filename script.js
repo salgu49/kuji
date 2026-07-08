@@ -31,14 +31,14 @@ class KujiGame {
 
         // Reward pool configuration
         this.rewardPool = {
-            'SSS': 2,
-            'SS': 2,
-            'A': 8,
-            'B': 2,
-            'C': 16,
-            'D': 16,
-            'E': 16,
-            'F': 16
+            'SSS상': 2,
+            'SS상': 2,
+            'A상': 8,
+            'B상': 2,
+            'C상': 16,
+            'D상': 16,
+            'E상': 16,
+            'F상': 16
         };
 
         // Initialize game
