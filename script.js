@@ -319,17 +319,23 @@ class KujiGame {
      * Spawn card - make it visible and ready for interaction
      */
     spawnCard() {
-        // Ensure card is visible
+        // Show card and card-wrapper
+        this.card.style.display = 'block';
         this.cardWrapper.style.display = 'block';
+        
+        // Reset opacity and transform
         this.cardWrapper.style.opacity = '1';
         this.cardWrapper.style.transform = 'none';
-
-        // Reset card to unflipped state
+        
+        // Remove flipped state
         this.cardInner.classList.remove('flipped');
-
+        
         // Clear reward text
         this.rewardText.textContent = '';
-
+        
+        // Remove glow classes
+        this.rewardDisplay.classList.remove('glow-golden', 'glow-red');
+        
         console.log('Card spawned and ready for interaction');
     }
 
