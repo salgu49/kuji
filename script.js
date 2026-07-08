@@ -201,9 +201,9 @@ class KujiGame {
             }
 
             confetti({
-                particleCount: 3,
+                particleCount: 250,
                 angle: Math.random() * 360,
-                spread: 60,
+                spread: 160,
                 velocity: Math.random() * 50 + 40,
                 colors: rainbowColors,
                 size: Math.random() * 3 + 2,
@@ -310,7 +310,7 @@ class KujiGame {
      */
     resetCardState() {
         this.cardInner.classList.remove('flipped');
-        this.rewardText.textContent = '?';
+        this.rewardText.textContent = '';
         this.rewardDisplay.classList.remove('glow-golden', 'glow-red');
 
     }
